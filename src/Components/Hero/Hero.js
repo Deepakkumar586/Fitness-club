@@ -11,6 +11,7 @@ import './Hero.css'
 
 const Hero = () => {
     const transition = { type: 'spring', duration: 3 }
+    const mobile = window.innerWidth <= 768 ? true : false;
     return (
         <div className='hero'>
             <div className='blur blur-hero'></div>
@@ -19,9 +20,9 @@ const Hero = () => {
                 {/* best Add */}
                 <div className='best-add'>
                     <motion.div
-                        initial={{ left: '130px' }}
+                        initial={{ left: mobile ? "90px" : '238px' }}
                         whileInView={{ left: '6px' }}
-                        transition={{ ...transition, type: 'twin' }}
+                        transition={{ ...transition, type: 'tween' }}
                     >
 
                     </motion.div>
