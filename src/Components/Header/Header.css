@@ -1,6 +1,7 @@
 .header{
     display: flex;
     justify-content: space-between;
+
 }
 .logo{
     width: 160px;
@@ -9,7 +10,7 @@
 .header-menu{
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     color: aliceblue;
 }
 .header-menu li{
@@ -19,15 +20,15 @@
     color: var(--yellow);
 }
 @media screen and (max-width:768px) {
-    .header :nth-child(2){
-        position: fixed;
-        right: 2rem;
+    .header :nth-child(){
+        position:fixed;
+        right: 9rem;
         z-index:99;
 
     }
     .header-menu{
-        flex-direction: column;
+        flex-direction:column;
         background-color: var(--appColor);
-        padding: 2rem;
+        padding: 2em;
     }
 }

@@ -22,21 +22,39 @@ const Header = () => {
                     : (
                         <ul className='header-menu'>
 
-                            <li onClick={() => setMenuOpened(false)}> <Link>Home</Link></li>
-                            <li onClick={() => setMenuOpened(false)}>Programs</li>
+                            <li onClick={() => setMenuOpened(false)}> <Link
+                                onClick={() => setMenuOpened(false)}
+                                to='header'
+                                span={true}
+                                smooth={true}
+
+                            >
+                                Home
+                            </Link></li>
+                            <li onClick={() => setMenuOpened(false)}>
+
+                                <Link to='program'
+                                    onClick={() => setMenuOpened(false)}
+                                    span={true}
+                                    smooth={true}>
+                                    Programs
+                                </Link>
+                            </li>
                             <li onClick={() => setMenuOpened(false)}>Why use</li>
                             <li onClick={() => setMenuOpened(false)}>
                                 <Link to='plans'
+                                    onClick={() => setMenuOpened(false)}
                                     span={true}
                                     smooth={true}
                                 >Our Plans</Link>
                             </li>
                             <li onClick={() => setMenuOpened(false)}>
 
-                                <Link to='contact'
+                                <Link to='footer'
+                                    onClick={() => setMenuOpened(false)}
                                     span={true}
                                     smooth={true}
-                                >Contact</Link>
+                                >Footer</Link>
                             </li>
 
 

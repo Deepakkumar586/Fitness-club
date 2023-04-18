@@ -5,7 +5,7 @@ import hero_image_black from "../../assets/hero_image_back.png";
 import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
 import { motion } from 'framer-motion';
-
+import NumberCounter from 'number-counter'
 
 import './Hero.css'
 
@@ -13,7 +13,7 @@ const Hero = () => {
     const transition = { type: 'spring', duration: 3 }
     const mobile = window.innerWidth <= 768 ? true : false;
     return (
-        <div className='hero'>
+        <div className='hero id="home"'>
             <div className='blur blur-hero'></div>
             <div className='left-h'>
                 <Header />
@@ -46,17 +46,20 @@ const Hero = () => {
                 {/* some figgures add experience */}
                 <div className='Figure'>
                     <div>
-                        <span>+  100</span>
+                        <span>
+                            {/* Number Counter use */}
+                            <NumberCounter end={100} start={5} delay="4" preFix="+" />
+                        </span>
                         <span>Expert zim</span>
                     </div>
 
                     <div>
-                        <span>+ 78</span>
+                        <span> <NumberCounter end={60} start={5} delay="7" preFix="+" /></span>
                         <span> Members also joined</span>
                     </div>
 
                     <div>
-                        <span>+ 30 </span>
+                        <span> <NumberCounter end={160} start={3} delay="4" preFix="+" /> </span>
                         <span>Fitness program</span>
                     </div>
                 </div>
